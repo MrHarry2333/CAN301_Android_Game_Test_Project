@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SeekBar
+        android:id="@+id/global_bright_Seekbar"
+        android:layout_width="380dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/mute_setting_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen_brightness_setting_string" />
+
+    <SeekBar
+        android:id="@+id/global_volume_Seekbar"
+        android:layout_width="380dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen_brightness_setting_string2" />
+
+    <TextView
+        android:id="@+id/screen_brightness_setting_string"
+        android:layout_width="530dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/screen_brightness_string"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/screen_brightness_setting_string2"
+        android:layout_width="530dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/volume_setting_string"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/global_bright_Seekbar" />
+
+    <TextView
+        android:id="@+id/theme_color_setting_string"
+        android:layout_width="530dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/theme_color_string"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/global_volume_Seekbar" />
+
+    <Switch
+        android:id="@+id/mute_setting_switch"
+        android:layout_width="150dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        android:checked="false"
+        android:text="@string/mute_setting_string"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/global_volume_Seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/screen_brightness_setting_string2" />
+
+    <Switch
+        android:id="@+id/auto_brightness_setting_switch"
+        android:layout_width="150dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:checked="true"
+        android:text="@string/auto_brightness_setting_string"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/global_bright_Seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/screen_brightness_setting_string" />
+
+    <Button
+        android:id="@+id/staff_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/staff_members_button_string"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_blue_selection_button"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/theme_color_blue_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:backgroundTint="@color/color_primary_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+
+    <Button
+        android:id="@+id/theme_color_red_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:backgroundTint="@color/custom_red"
+        app:layout_constraintStart_toEndOf="@+id/theme_color_blue_selection_button"
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+
+    <Button
+        android:id="@+id/theme_color_green_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:backgroundTint="@color/custom_green"
+        app:layout_constraintStart_toEndOf="@+id/theme_color_red_selection_button"
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+
+    <Button
+        android:id="@+id/theme_color_yellow_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:backgroundTint="@color/custon_yellow"
+        app:layout_constraintStart_toEndOf="@+id/theme_color_green_selection_button"
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
