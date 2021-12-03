@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -28,21 +29,57 @@ public class settingActivity extends AppCompatActivity {
 
     private SeekBar globalBrightSeekBar;
     private Switch autoBrightSwitch;
-    private boolean autoBrightEnabledFlag;
+    public boolean autoBrightEnabledFlag;
     private SeekBar globalVolumeSeekBar;
     private Switch muteSwitch;
+    private Button customThemeColorBlue, customThemeColorRed, customThemeColorGreen, customThemeColorYellow;
+    private SharedPreferences themeColorSharedPreferenceManager;
+    private SharedPreferences.Editor themeColorSharedPreferenceManager_Editor;
     private Button staffButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_global_settings);
 
+        globalThemeColorSelection();
         globalBrightSeekBarManager();
         autoBrightnessSwitch();
         globalVolumeSeekBarManager();
         muteSwitch();
+        chooseThemeColor();
         staffButton();
+    }
+
+    /**
+     * Global Theme's Color selection
+     * determined by themeColorFlag, modified by chooseThemeColor()
+     */
+    private void globalThemeColorSelection() {
+        themeColorSharedPreferenceManager = getPreferences(0);
+        themeColorSharedPreferenceManager_Editor = themeColorSharedPreferenceManager.edit();
+        switch (themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1)) {
+            case 2:
+                setTheme(R.style.CustomColorTheme_red);
+                break;
+            case 3:
+                setTheme(R.style.CustomColorTheme_green);
+                break;
+            case 4:
+                setTheme(R.style.CustomColorTheme_yellow);
+                break;
+            default:
+                setTheme(R.style.Theme_AndroidApplicationTest);
+                break;
+        }
+
+        // Debug Msg (Delete in final product)
+        String debugToastMsg = " * Debug Msg *" +
+                " themeColorFlag: " + themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1);
+        Toast t = Toast.makeText(settingActivity.this, debugToastMsg, Toast.LENGTH_SHORT);
+        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+        t.show();
+
+        setContentView(R.layout.activity_global_settings);
     }
 
     /**
@@ -68,12 +105,12 @@ public class settingActivity extends AppCompatActivity {
                 globalBrightSeekBar.setEnabled(true);
             }
 
-            // Debug Msg (Delete in final product)
-            String debugToastMsg = " * Debug Msg *" +
-                "System Current Brightness: " + currentScreenBrightness;
-            Toast t = Toast.makeText(settingActivity.this, debugToastMsg, Toast.LENGTH_LONG);
-            t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
-            t.show();
+//            // Debug Msg (Delete in final product)
+//            String debugToastMsg = " * Debug Msg *" +
+//                "System Current Brightness: " + currentScreenBrightness;
+//            Toast t = Toast.makeText(settingActivity.this, debugToastMsg, Toast.LENGTH_LONG);
+//            t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+//            t.show();
         } catch (Settings.SettingNotFoundException e) {
             e.printStackTrace();
         }
@@ -147,7 +184,7 @@ public class settingActivity extends AppCompatActivity {
         t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
         t.show();
          */
-        
+
         globalVolumeSeekBar.setMax(maxSystemVolume);
         globalVolumeSeekBar.setProgress(currentSystemVolume);
     }
@@ -188,6 +225,48 @@ public class settingActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Theme Color Choose
+     */
+    private void chooseThemeColor() {
+        customThemeColorBlue = (Button) findViewById(R.id.theme_color_blue_selection_button);
+        customThemeColorBlue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                themeColorSharedPreferenceManager_Editor.putInt("currentThemeColorMode", 1);
+                themeColorSharedPreferenceManager_Editor.commit();
+                recreate();
+            }
+        });
+        customThemeColorRed = (Button) findViewById(R.id.theme_color_red_selection_button);
+        customThemeColorRed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                themeColorSharedPreferenceManager_Editor.putInt("currentThemeColorMode", 2);
+                themeColorSharedPreferenceManager_Editor.commit();
+                recreate();
+            }
+        });
+        customThemeColorGreen = (Button) findViewById(R.id.theme_color_green_selection_button);
+        customThemeColorGreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                themeColorSharedPreferenceManager_Editor.putInt("currentThemeColorMode", 3);
+                themeColorSharedPreferenceManager_Editor.commit();
+                recreate();
+            }
+        });
+        customThemeColorYellow = (Button) findViewById(R.id.theme_color_yellow_selection_button);
+        customThemeColorYellow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                themeColorSharedPreferenceManager_Editor.putInt("currentThemeColorMode", 4);
+                themeColorSharedPreferenceManager_Editor.commit();
+                recreate();
+            }
+        });
+
+    }
 
     /**
      * Staff members Button for staff_button

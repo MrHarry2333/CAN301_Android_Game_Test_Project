@@ -2,35 +2,50 @@ package com.example.androidapplicationtest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 public class guessGameActivity extends AppCompatActivity {
 
-    ImageView cutSmallTop,stoneSmallTop,buSmallTop,cutSmallBottom,stoneSmallBottom,buSmallBottom,cutBigTop,stoneBigTop,buBigTop,cutBigBottom,stoneBigBottom,buBigBottom,winTop,winBottom,restartBottom,playBottom;
-    int chooseNum=0;
-    int chooseCutTop=0;
-    int chooseStoneTop=0;
-    int chooseBuTop=0;
-    int chooseCutBottom=0;
-    int chooseStoneBottom=0;
-    int chooseBuBottom=0;
-    int chooseOnce=0;
-    int chooseSecondTime=0;
-    int finalResult=0;
+    private ImageView cutSmallTop,
+            stoneSmallTop,
+            buSmallTop,
+            cutSmallBottom,
+            stoneSmallBottom,
+            buSmallBottom,
+            cutBigTop,
+            stoneBigTop,
+            buBigTop,
+            cutBigBottom,
+            stoneBigBottom,
+            buBigBottom,
+            winTop,winBottom,
+            restartBottom,
+            playBottom;
+    private int chooseCutTop=0,
+            chooseNum=0,
+            chooseStoneTop=0,
+            chooseBuTop=0,
+            chooseCutBottom=0,
+            chooseStoneBottom=0,
+            chooseBuBottom=0,
+            chooseOnce=0,
+            chooseSecondTime=0,
+            finalResult=0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_guess_game);
         setViewComponent();
         startGame();
-        // Intent intent = new Intent(MainActivity.this,musicplay.class);
-        // String action=musicplay.Action_music;
-        // intent.setAction(action);
-        // startService(intent);
+         Intent intent = new Intent(guessGameActivity.this, backgroundMusicPlayIntentService.class);
+         String action = backgroundMusicPlayIntentService.Action_music;
+         intent.setAction(action);
+         startService(intent);
     }
 
 
