@@ -9,12 +9,15 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Main Activity
@@ -23,10 +26,12 @@ public class mainActivity extends AppCompatActivity {
 
     private TextView startGameTextView;
     private TextView settingTextView;
+    private SharedPreferences themeColorSharedPreferenceManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        globalThemeColorSelection();
         setContentView(R.layout.activity_main);
 
         // Start Games TextView
@@ -45,7 +50,7 @@ public class mainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent jumpToSettingPage = new Intent(mainActivity.this, settingActivity.class);
-                startActivity(jumpToSettingPage);
+                startActivityForResult(jumpToSettingPage, 1);
             }
         });
 
@@ -53,6 +58,42 @@ public class mainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_SETTINGS) != PackageManager.PERMISSION_GRANTED)
             grantingPermissions();
 
+    }
+
+    /**
+     * Global Theme's Color selection
+     * determined by themeColorFlag, modified by chooseThemeColor()
+     */
+    private void globalThemeColorSelection() {
+        themeColorSharedPreferenceManager = getSharedPreferences("currentThemeColorMode",0);
+        switch (themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1)) {
+            case 2:
+                setTheme(R.style.CustomColorTheme_red);
+                break;
+            case 3:
+                setTheme(R.style.CustomColorTheme_green);
+                break;
+            case 4:
+                setTheme(R.style.CustomColorTheme_yellow);
+                break;
+            default:
+                setTheme(R.style.Theme_AndroidApplicationTest);
+                break;
+        }
+    }
+
+    /**
+     * onActivityResult for getting result code from settingActivity
+     * this result code is to notify mainActivity to change theme or not.
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent returnData) {
+        super.onActivityResult(requestCode, resultCode, returnData);
+        if (requestCode == 1) {
+            if (resultCode == 1) {
+                recreate();
+            }
+        }
     }
 
     /**

@@ -148,7 +148,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@null"
-        android:backgroundTint="@color/custon_yellow"
+        android:backgroundTint="@color/custom_yellow"
         app:layout_constraintStart_toEndOf="@+id/theme_color_green_selection_button"
         app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
 

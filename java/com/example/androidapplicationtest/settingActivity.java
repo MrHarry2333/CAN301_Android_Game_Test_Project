@@ -53,31 +53,32 @@ public class settingActivity extends AppCompatActivity {
     /**
      * Global Theme's Color selection
      * determined by themeColorFlag, modified by chooseThemeColor()
+     * note that in settingActivity it uses Theme withActionBar (defined in themes.xml)
      */
     private void globalThemeColorSelection() {
-        themeColorSharedPreferenceManager = getPreferences(0);
+        themeColorSharedPreferenceManager = getSharedPreferences("currentThemeColorMode",0);
         themeColorSharedPreferenceManager_Editor = themeColorSharedPreferenceManager.edit();
         switch (themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1)) {
             case 2:
-                setTheme(R.style.CustomColorTheme_red);
+                setTheme(R.style.CustomColorTheme_red_withActionBar);
                 break;
             case 3:
-                setTheme(R.style.CustomColorTheme_green);
+                setTheme(R.style.CustomColorTheme_green_withActionBar);
                 break;
             case 4:
-                setTheme(R.style.CustomColorTheme_yellow);
+                setTheme(R.style.CustomColorTheme_yellow_withActionBar);
                 break;
             default:
-                setTheme(R.style.Theme_AndroidApplicationTest);
+                setTheme(R.style.Theme_AndroidApplicationTest_withActionBar);
                 break;
         }
 
-        // Debug Msg (Delete in final product)
-        String debugToastMsg = " * Debug Msg *" +
-                " themeColorFlag: " + themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1);
-        Toast t = Toast.makeText(settingActivity.this, debugToastMsg, Toast.LENGTH_SHORT);
-        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
-        t.show();
+//        // Debug Msg (Delete in final product)
+//        String debugToastMsg = " * Debug Msg *" +
+//                " themeColorFlag: " + themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1);
+//        Toast t = Toast.makeText(settingActivity.this, debugToastMsg, Toast.LENGTH_SHORT);
+//        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+//        t.show();
 
         setContentView(R.layout.activity_global_settings);
     }
@@ -265,7 +266,17 @@ public class settingActivity extends AppCompatActivity {
                 recreate();
             }
         });
+    }
 
+    /**
+     * onBackPressed end settingActivity when back button is pressed
+     * then send Intent data to mainActivity
+     */
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(settingActivity.this, mainActivity.class);
+        setResult(1, i);
+        finish();
     }
 
     /**
