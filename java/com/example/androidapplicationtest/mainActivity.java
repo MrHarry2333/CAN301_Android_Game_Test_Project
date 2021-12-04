@@ -1,5 +1,6 @@
 package com.example.androidapplicationtest;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -12,6 +13,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.Gravity;
@@ -28,6 +30,7 @@ public class mainActivity extends AppCompatActivity {
     private TextView settingTextView;
     private SharedPreferences themeColorSharedPreferenceManager;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +58,10 @@ public class mainActivity extends AppCompatActivity {
         });
 
         // Checking Permission, if no, then an Alert Window will popup
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_SETTINGS) != PackageManager.PERMISSION_GRANTED)
-            grantingPermissions();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if(!Settings.System.canWrite(this))
+                grantingPermissions();
+        }
 
     }
 
