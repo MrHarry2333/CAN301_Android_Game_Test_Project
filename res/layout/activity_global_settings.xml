@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,10 +39,12 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Theme.primaryTheme"/>
 
     <TextView
         android:id="@+id/screen_brightness_setting_string2"
+        style="@style/Theme.primaryTheme"
         android:layout_width="530dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -56,6 +59,7 @@
 
     <TextView
         android:id="@+id/theme_color_setting_string"
+        style="@style/Theme.primaryTheme"
         android:layout_width="530dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -70,6 +74,7 @@
 
     <Switch
         android:id="@+id/mute_setting_switch"
+        style="@style/Theme.primaryTheme"
         android:layout_width="150dp"
         android:layout_height="67dp"
         android:layout_marginTop="7dp"
@@ -84,6 +89,7 @@
 
     <Switch
         android:id="@+id/auto_brightness_setting_switch"
+        style="@style/Theme.primaryTheme"
         android:layout_width="150dp"
         android:layout_height="67dp"
         android:layout_marginTop="8dp"
@@ -98,12 +104,13 @@
 
     <Button
         android:id="@+id/staff_button"
+        style="@style/Theme.primaryTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
         android:text="@string/staff_members_button_string"
-        android:textSize="18sp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/theme_color_blue_selection_button"
         tools:ignore="TextContrastCheck" />
@@ -117,7 +124,8 @@
         android:background="@null"
         android:backgroundTint="@color/color_primary_blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string"
+        style="@style/Theme.primaryTheme" />
 
     <Button
         android:id="@+id/theme_color_red_selection_button"
@@ -128,7 +136,8 @@
         android:background="@null"
         android:backgroundTint="@color/custom_red"
         app:layout_constraintStart_toEndOf="@+id/theme_color_blue_selection_button"
-        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string"
+        style="@style/Theme.primaryTheme" />
 
     <Button
         android:id="@+id/theme_color_green_selection_button"
@@ -139,7 +148,8 @@
         android:background="@null"
         android:backgroundTint="@color/custom_green"
         app:layout_constraintStart_toEndOf="@+id/theme_color_red_selection_button"
-        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string"
+        style="@style/Theme.primaryTheme" />
 
     <Button
         android:id="@+id/theme_color_yellow_selection_button"
@@ -150,6 +160,7 @@
         android:background="@null"
         android:backgroundTint="@color/custom_yellow"
         app:layout_constraintStart_toEndOf="@+id/theme_color_green_selection_button"
-        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string" />
+        app:layout_constraintTop_toBottomOf="@+id/theme_color_setting_string"
+        style="@style/Theme.primaryTheme" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

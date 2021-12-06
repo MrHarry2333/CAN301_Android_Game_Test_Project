@@ -69,7 +69,7 @@ public class settingActivity extends AppCompatActivity {
                 setTheme(R.style.CustomColorTheme_yellow_withActionBar);
                 break;
             default:
-                setTheme(R.style.Theme_AndroidApplicationTest_withActionBar);
+                setTheme(R.style.Theme_primaryTheme_withActionBar);
                 break;
         }
 
@@ -144,8 +144,8 @@ public class settingActivity extends AppCompatActivity {
                         Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
                         globalBrightSeekBar.setEnabled(false);
                         autoBrightEnabledFlag = false;
-                        Toast t = Toast.makeText(settingActivity.this, "Auto Screen Brightness On", Toast.LENGTH_SHORT);
-                        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+                        Toast t = Toast.makeText(settingActivity.this, "", Toast.LENGTH_SHORT);
+                        t.setText("Auto Screen Brightness On");
                         t.show();
                     } catch (Exception localException) {
                         localException.printStackTrace();
@@ -156,8 +156,8 @@ public class settingActivity extends AppCompatActivity {
                         Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
                         globalBrightSeekBar.setEnabled(true);
                         autoBrightEnabledFlag = true;
-                        Toast t = Toast.makeText(settingActivity.this, "Manually Control Screen Brightness", Toast.LENGTH_SHORT);
-                        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+                        Toast t = Toast.makeText(settingActivity.this, "", Toast.LENGTH_SHORT);
+                        t.setText("Manually Control Screen Brightness");
                         t.show();
                     } catch (Exception localException) {
                         localException.printStackTrace();
@@ -204,8 +204,9 @@ public class settingActivity extends AppCompatActivity {
                         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
                         audioManager.setStreamMute(AudioManager.STREAM_MUSIC, true);
                         globalVolumeSeekBar.setEnabled(false);
-                        Toast t = Toast.makeText(settingActivity.this, "Muted", Toast.LENGTH_SHORT);
-                        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+                        // Toast.makeText(settingActivity.this, "Muted", Toast.LENGTH_SHORT).show();
+                        Toast t = Toast.makeText(settingActivity.this, "", Toast.LENGTH_SHORT);
+                        t.setText("Muted");
                         t.show();
                     } catch (Exception localException) {
                         localException.printStackTrace();
@@ -215,8 +216,8 @@ public class settingActivity extends AppCompatActivity {
                         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
                         audioManager.setStreamMute(AudioManager.STREAM_MUSIC, true);
                         globalVolumeSeekBar.setEnabled(true);
-                        Toast t = Toast.makeText(settingActivity.this, "Unmuted", Toast.LENGTH_SHORT);
-                        t.setGravity(Gravity.FILL_HORIZONTAL, 0, 0);
+                        Toast t = Toast.makeText(settingActivity.this, "", Toast.LENGTH_SHORT);
+                        t.setText("Unmuted");
                         t.show();
                     } catch (Exception localException) {
                         localException.printStackTrace();

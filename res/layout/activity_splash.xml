@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/splash_root"
+    android:id="@+id/splash_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2484CD"
@@ -20,7 +20,7 @@
         android:layout_height="102dp"
         android:layout_margin="30dp"
         android:fontFamily="@font/alfa_slab_one"
-        android:text="Games!!"
+        android:text="Childhood Games"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"

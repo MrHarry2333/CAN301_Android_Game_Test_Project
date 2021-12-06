@@ -1,14 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AndroidApplicationTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.primaryTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/color_primary_blue</item>
         <item name="colorPrimaryVariant">@color/color_primary_blue_darker</item>
-        <item name="colorOnPrimary">#C6ECFF</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#03C8DA</item>
+        <item name="colorSecondary">@color/color_primary_blue_darker</item>
         <item name="colorSecondaryVariant">#017787</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/color_primary_blue_darkest</item>
         <!-- Status bar color. -->
         <!-- <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item> -->
         <item name="android:statusBarColor">@color/color_primary_blue_darker</item>
@@ -20,15 +22,19 @@
     <style name="Theme.AndroidApplicationTest.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- Customized Color Theme -->
-    <style name="Theme.AndroidApplicationTest_withActionBar" parent="Theme.MaterialComponents.DayNight">
+    <style name="Theme.primaryTheme_withActionBar" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/color_primary_blue</item>
         <item name="colorPrimaryVariant">@color/color_primary_blue_darker</item>
-        <item name="colorOnPrimary">#C6ECFF</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#03C8DA</item>
+        <item name="colorSecondary">@color/color_primary_blue_darker</item>
         <item name="colorSecondaryVariant">#017787</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/color_primary_blue_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/color_primary_blue_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/color_primary_blue_darker</item>
     </style>
@@ -36,6 +42,12 @@
         <item name="colorPrimary">@color/custom_red</item>
         <item name="colorPrimaryVariant">@color/custom_red_darker</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_red_darker</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/custom_red_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/custom_red_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_red_darker</item>
     </style>
@@ -43,6 +55,12 @@
         <item name="colorPrimary">@color/custom_red</item>
         <item name="colorPrimaryVariant">@color/custom_red_darker</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_red_darker</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/custom_red_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/custom_red_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_red_darker</item>
     </style>
@@ -50,6 +68,12 @@
         <item name="colorPrimary">@color/custom_green</item>
         <item name="colorPrimaryVariant">@color/custom_green_darker</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_green_darker</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/custom_green_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/custom_green_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_green_darker</item>
     </style>
@@ -57,6 +81,12 @@
         <item name="colorPrimary">@color/custom_green</item>
         <item name="colorPrimaryVariant">@color/custom_green_darker</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_green_darker</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/custom_green_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/custom_green_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_green_darker</item>
     </style>
@@ -64,6 +94,12 @@
         <item name="colorPrimary">@color/custom_yellow</item>
         <item name="colorPrimaryVariant">@color/custom_yellow_darker</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_yellow_darker</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/custom_yellow_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/custom_yellow_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_yellow_darker</item>
     </style>
@@ -71,6 +107,12 @@
         <item name="colorPrimary">@color/custom_yellow</item>
         <item name="colorPrimaryVariant">@color/custom_yellow_darker</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/custom_yellow_darker</item>
+        <!-- ActionBar text color. -->
+        <item name="android:textColorPrimary">@color/custom_yellow_darkest</item>
+        <!-- Window background color.-->
+        <item name="android:windowBackground">@color/custom_yellow_lighter</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_yellow_darker</item>
     </style>

@@ -82,7 +82,7 @@ public class mainActivity extends AppCompatActivity {
                 setTheme(R.style.CustomColorTheme_yellow);
                 break;
             default:
-                setTheme(R.style.Theme_AndroidApplicationTest);
+                setTheme(R.style.Theme_primaryTheme);
                 break;
         }
     }
