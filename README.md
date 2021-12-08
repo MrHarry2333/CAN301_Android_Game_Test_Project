@@ -2,6 +2,7 @@
 An school's assessment related to simple Android native Java development.
 
 1. ? - Double Rock-paper-scissors
+
 In the first round, both side of the player choose two options respectively.
 After selection, click the start button, and the choices of both sides will be displayed on the screen.
 In the second round, both player need to choose another item from your previous two choices.
@@ -11,6 +12,7 @@ Finally, the final result will be displayed in the middle of the screen.
 2. finger - 
 
 3. superK - Double Bear
+
 This is a game named “double bear” which used to be a sample gesture game like finger guessing game in developer’s childhood.
 The main method to playing this game is to use the magic arts struck down rival to be the winner. The game allow at least 2 players and no more than 4 players to play in the past. The most three basic magic is “gas”, “shield” and “baozi”.
 First magic “gas”, it is similar with energy value. Each round allow each players to use one magic and if you use this one, it will give you one gas and you can use the gas like energy in the future confrontation. With the consume of the gas, you can use lot of attack magic like “baozi”. Make sure that your rival didn’t use attack magic like “baozi” when you are using “gas”, it will shut down your life! Every attack magic will kill you if you use “gas” to withstand. So, use it cautious and caredully. It can be sure that the first magic of each person must be “gas” because each attack need gas to display and in the first round, both of players have no gas.
