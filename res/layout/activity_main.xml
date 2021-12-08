@@ -6,30 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".mainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".mainActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Splash and Main page image."
+            android:scaleType="fitXY"
+            android:src="@drawable/splash_img"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/start_game_main_textView"
             style="@style/Theme.primaryTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="188dp"
-            android:layout_marginTop="476dp"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="30dp"
             android:text="@string/start_game_string"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/messageboard_main_textView"
             style="@style/Theme.primaryTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/start_game_main_textView"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="164dp"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="30dp"
             android:text="@string/message_board_string"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,12 +62,14 @@
             style="@style/Theme.primaryTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/messageboard_main_textView"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="224dp"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="50dp"
             android:text="@string/setting_string"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/messageboard_main_textView" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 </ScrollView>

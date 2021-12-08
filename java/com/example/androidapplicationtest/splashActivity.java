@@ -2,10 +2,12 @@ package com.example.androidapplicationtest;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.LinearLayout;
 
 /**
@@ -13,6 +15,7 @@ import android.widget.LinearLayout;
  */
 public class splashActivity extends Activity {
     private static final int sleepTime = 2000;
+    private Handler sleepHandler;
     private SharedPreferences themeColorSharedPreferenceManager;
 
     @Override
@@ -22,27 +25,21 @@ public class splashActivity extends Activity {
         globalThemeColorSelection();
         setContentView(R.layout.activity_splash);
         super.onCreate(arg0);
+
+        // delay for 2000ms (sleepTime) before showing mainActivity
+        sleepHandler = new Handler();
+        sleepHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(splashActivity.this, mainActivity.class),
+                        ActivityOptions.makeSceneTransitionAnimation(splashActivity.this).toBundle());
+                // splashActivity.this.finish();
+            }
+        }, sleepTime);
+
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        new Thread(new Runnable() {
-            public void run() {
-                long start = System.currentTimeMillis();
-                long costTime = System.currentTimeMillis() - start;
-                if (sleepTime - costTime > 0) {
-                    try {
-                        Thread.sleep(sleepTime - costTime);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                startActivity(new Intent(splashActivity.this, mainActivity.class));
-                finish();
-            }
-        }).start();
-    }
+
 
     /**
      * Global Theme's Color selection

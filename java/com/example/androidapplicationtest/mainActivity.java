@@ -16,8 +16,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.transition.Fade;
+import android.transition.TransitionInflater;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +39,12 @@ public class mainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         globalThemeColorSelection();
+
+        // Setup Activity Transition for splashActivity -> mainActivity
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        // Fade fadeTransition  = (Fade) TransitionInflater.from(this).inflateTransition(R.transition.activity_fade);
+        // getWindow().setEnterTransition(fadeTransition);
+        getWindow().setEnterTransition(new Fade());
         setContentView(R.layout.activity_main);
 
         // Start Games TextView

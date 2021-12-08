@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/splash_background"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:clickable="false"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:contentDescription="To be replaced."
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Splash and Main page image."
         android:scaleType="fitXY"
-        android:src="@drawable/splash_test" />
+        android:src="@drawable/splash_img"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="102dp"
-        android:layout_margin="30dp"
+        android:id="@+id/textView"
+        style="@style/Theme.primaryTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="Childhood Games"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="45sp"
         android:visibility="visible"
-        style="@style/Theme.primaryTheme" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="79dp" />
 
-</LinearLayout>
+</RelativeLayout>
