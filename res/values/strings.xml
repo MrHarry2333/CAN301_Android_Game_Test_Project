@@ -2,12 +2,21 @@
     <string name="app_name">Childhood Games</string>
     <string name="setting_string">Settings</string>
     <string name="start_game_string">Start Games</string>
+    <string name="message_board_string">Message Board</string>
+
     <string name="screen_brightness_string">Screen Brightness</string>
     <string name="volume_setting_string">Volume</string>
     <string name="mute_setting_string">Mute</string>
     <string name="auto_brightness_setting_string">Auto</string>
-    <string name="staff_members_button_string">Staff Members Acknowledgement</string>
-    <string name="game_1_string">Game 1</string>
-    <string name="game_2_string">Game 2</string>
     <string name="theme_color_string">Theme Color</string>
+    <string name="staff_members_button_string">Staff Members Acknowledgement</string>
+
+    <string name="game_1_string">Guess what other is?</string>
+    <string name="game_2_string">Game 2</string>
+
+    <string name="game_1_rule">In the first round, both side of the player choose two options respectively.
+        \n\nAfter selection, click the start button, and the choices of both sides will be displayed on the screen.
+        \n\nIn the second round, both player need to choose another item from your previous two choices. This choice will cancel the selected item.
+        \n\nAfter selecting, press the start button. Finally, the final result will be displayed in the middle of the screen.</string>
+
 </resources>

@@ -13,29 +13,39 @@
 
         <TextView
             android:id="@+id/start_game_main_textView"
+            style="@style/Theme.primaryTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="199dp"
-            android:layout_marginTop="510dp"
-            android:layout_marginEnd="178dp"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="476dp"
             android:text="@string/start_game_string"
             android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/settings_main_textView"
+            android:id="@+id/messageboard_main_textView"
+            style="@style/Theme.primaryTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="227dp"
-            android:layout_marginTop="69dp"
-            android:layout_marginEnd="227dp"
-            android:text="@string/setting_string"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="72dp"
+            android:text="@string/message_board_string"
             android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/start_game_main_textView" />
+
+        <TextView
+            android:id="@+id/settings_main_textView"
+            style="@style/Theme.primaryTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="224dp"
+            android:layout_marginTop="72dp"
+            android:text="@string/setting_string"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageboard_main_textView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

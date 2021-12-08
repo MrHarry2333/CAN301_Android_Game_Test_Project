@@ -28,6 +28,7 @@ public class mainActivity extends AppCompatActivity {
 
     private TextView startGameTextView;
     private TextView settingTextView;
+    private TextView messageBoardTextView;
     private SharedPreferences themeColorSharedPreferenceManager;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -40,6 +41,16 @@ public class mainActivity extends AppCompatActivity {
         // Start Games TextView
         startGameTextView = (TextView) findViewById(R.id.start_game_main_textView);
         startGameTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent jumpToSettingPage = new Intent(mainActivity.this, selectGamesActivity.class);
+                startActivity(jumpToSettingPage);
+            }
+        });
+
+        // Messageboard Textview
+        messageBoardTextView = (TextView) findViewById(R.id.messageboard_main_textView);
+        messageBoardTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent jumpToSettingPage = new Intent(mainActivity.this, selectGamesActivity.class);

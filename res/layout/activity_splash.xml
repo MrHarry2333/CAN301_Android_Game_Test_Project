@@ -3,7 +3,6 @@
     android:id="@+id/splash_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2484CD"
     android:clickable="false"
     android:orientation="vertical">
 
@@ -22,8 +21,8 @@
         android:fontFamily="@font/alfa_slab_one"
         android:text="Childhood Games"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="34sp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        style="@style/Theme.primaryTheme" />
 
 </LinearLayout>

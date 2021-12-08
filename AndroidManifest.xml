@@ -8,9 +8,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher_custom_large"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher_custom_large_round"
         android:supportsRtl="true">
         <service
             android:name=".backgroundMusicPlayIntentService"
@@ -47,7 +47,8 @@
             android:name=".staffMembersActivity" />
         <!-- Guess Game Activity -->
         <activity
-            android:name=".guessGameActivity" />
+            android:name=".guessGameActivity"
+            android:label="Guess What Other Is?"/>
 
         <meta-data
             android:name="preloaded_fonts"

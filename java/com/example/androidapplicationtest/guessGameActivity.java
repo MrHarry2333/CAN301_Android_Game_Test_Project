@@ -3,9 +3,17 @@ package com.example.androidapplicationtest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 
 public class guessGameActivity extends AppCompatActivity {
 
@@ -34,18 +42,82 @@ public class guessGameActivity extends AppCompatActivity {
             chooseOnce=0,
             chooseSecondTime=0,
             finalResult=0;
+    private SharedPreferences themeColorSharedPreferenceManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        globalThemeColorSelection();
         setContentView(R.layout.activity_guess_game);
         setViewComponent();
         startGame();
-         Intent intent = new Intent(guessGameActivity.this, backgroundMusicPlayIntentService.class);
-         String action = backgroundMusicPlayIntentService.Action_music;
-         intent.setAction(action);
-         startService(intent);
+        Intent intent = new Intent(guessGameActivity.this, backgroundMusicPlayIntentService.class);
+        String action = backgroundMusicPlayIntentService.Action_music;
+        intent.setAction(action);
+        startService(intent);
+    }
+
+    /**
+     * Global Theme's Color selection
+     * determined by themeColorFlag, modified by chooseThemeColor()
+     */
+    private void globalThemeColorSelection() {
+        themeColorSharedPreferenceManager = getSharedPreferences("currentThemeColorMode",0);
+        switch (themeColorSharedPreferenceManager.getInt("currentThemeColorMode", 1)) {
+            case 2:
+                setTheme(R.style.CustomColorTheme_red_withActionBar);
+                break;
+            case 3:
+                setTheme(R.style.CustomColorTheme_green_withActionBar);
+                break;
+            case 4:
+                setTheme(R.style.CustomColorTheme_yellow_withActionBar);
+                break;
+            default:
+                setTheme(R.style.Theme_primaryTheme_withActionBar);
+                break;
+        }
+    }
+
+    /**
+     * ActionBar "showRule" button initializer
+     * @param menu
+     * @return
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_menu_in_game, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    /**
+     * ActionBar "showRule" button set listener
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_show_rules:
+                // make a popup window
+                initShowRulePopupWindow();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /**
+     * Construct a PopupWindow to show rule
+     */
+    private void initShowRulePopupWindow() {
+        View v = LayoutInflater.from(guessGameActivity.this).inflate(R.layout.popupwindow_game1_rule, null, false);
+        PopupWindow p = new PopupWindow(v, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, false);
+        p.setOutsideTouchable(true);
+        // p.setBackgroundDrawable(new ColorDrawable(0x00000000));
+        p.showAsDropDown(findViewById(R.id.action_show_rules));
     }
 
 

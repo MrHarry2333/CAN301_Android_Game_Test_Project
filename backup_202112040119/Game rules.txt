@@ -1,6 +1,0 @@
-This is a game similar to throw the die. 
-There are three imageview on the desk, each one can roll out numbers 1-9. 
-The player whose result (the sum of three numbers) is larger can win the game. 
-The button "play" is let the three views start with random numbers. 
-The button stop is get the number of three views, and the tips at the bottom of the screen will show the total number of the three views. 
-The restart button is to return the three views into the initial state.
