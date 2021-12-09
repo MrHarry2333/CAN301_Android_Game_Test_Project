@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
@@ -31,7 +33,9 @@ public class guessGameActivity extends AppCompatActivity {
             buBigBottom,
             winTop,winBottom,
             restartBottom,
-            playBottom;
+            playBottom,
+            musicStop;
+    private ImageButton playBtn;
     private int chooseCutTop=0,
             chooseNum=0,
             chooseStoneTop=0,
@@ -42,6 +46,8 @@ public class guessGameActivity extends AppCompatActivity {
             chooseOnce=0,
             chooseSecondTime=0,
             finalResult=0;
+    MediaPlayer mp;
+
     private SharedPreferences themeColorSharedPreferenceManager;
 
 
@@ -50,12 +56,27 @@ public class guessGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         globalThemeColorSelection();
         setContentView(R.layout.activity_guess_game);
+
         setViewComponent();
         startGame();
-        Intent intent = new Intent(guessGameActivity.this, backgroundMusicPlayIntentService.class);
-        String action = backgroundMusicPlayIntentService.Action_music;
-        intent.setAction(action);
-        startService(intent);
+//        Intent intent = new Intent(guessGameActivity.this, backgroundMusicPlayIntentService.class);
+//        String action = backgroundMusicPlayIntentService.Action_music;
+//        intent.setAction(action);
+//        startService(intent);
+        mp = MediaPlayer.create(this, R.raw.music1);
+        mp.setLooping(true);
+        playBtn = (ImageButton) findViewById(R.id.musicPlayButton);
+        mp.start();
+    }
+
+    public void playBtnClick(View view) {
+        if(!mp.isPlaying()){
+            mp.start();
+            playBtn.setBackgroundResource(R.mipmap.playmusic);
+        } else {
+            mp.pause();
+            playBtn.setBackgroundResource(R.mipmap.musicpause);
+        }
     }
 
     /**
@@ -319,7 +340,6 @@ public class guessGameActivity extends AppCompatActivity {
 
 
     public void startGame(){
-
 
         if(chooseNum==4) {
             if (chooseCutTop == 1) {

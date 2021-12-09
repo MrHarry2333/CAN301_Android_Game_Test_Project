@@ -21,6 +21,18 @@
         android:layout_marginLeft="80dp"
         />
 
+    <!-- Pause and Resume Play -->
+    <ImageButton
+        android:id="@+id/musicPlayButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="playBtnClick"
+        android:background="@drawable/playmusic"
+        />
+
 
     <ImageView
         android:layout_width="50dp"

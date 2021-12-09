@@ -2,7 +2,6 @@ package com.example.androidapplicationtest;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.content.Context;
 import android.media.MediaPlayer;
 
 /**

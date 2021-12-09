@@ -40,6 +40,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/color_primary_blue_darker</item>
     </style>
+
     <style name="CustomColorTheme_red" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/custom_red</item>
         <item name="colorPrimaryVariant">@color/custom_red_darker</item>
@@ -53,6 +54,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_red_darker</item>
     </style>
+
     <style name="CustomColorTheme_red_withActionBar" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/custom_red</item>
         <item name="colorPrimaryVariant">@color/custom_red_darker</item>
@@ -66,6 +68,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_red_darker</item>
     </style>
+
     <style name="CustomColorTheme_green" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/custom_green</item>
         <item name="colorPrimaryVariant">@color/custom_green_darker</item>
@@ -79,6 +82,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_green_darker</item>
     </style>
+
     <style name="CustomColorTheme_green_withActionBar" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/custom_green</item>
         <item name="colorPrimaryVariant">@color/custom_green_darker</item>
@@ -92,6 +96,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_green_darker</item>
     </style>
+
     <style name="CustomColorTheme_yellow" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/custom_yellow</item>
         <item name="colorPrimaryVariant">@color/custom_yellow_darker</item>
@@ -105,6 +110,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_yellow_darker</item>
     </style>
+
     <style name="CustomColorTheme_yellow_withActionBar" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/custom_yellow</item>
         <item name="colorPrimaryVariant">@color/custom_yellow_darker</item>
@@ -118,4 +124,5 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/custom_yellow_darker</item>
     </style>
+
 </resources>

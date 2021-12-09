@@ -11,6 +11,7 @@ import android.widget.Button;
 public class selectGamesActivity extends AppCompatActivity {
     private Button game1;
     private Button game2;
+    private Button game3;
     private SharedPreferences themeColorSharedPreferenceManager;
 
     @Override
@@ -21,6 +22,7 @@ public class selectGamesActivity extends AppCompatActivity {
 
         game1ButtonManager();
         game2ButtonManager();
+        game3ButtonManager();
 
     }
 
@@ -47,7 +49,7 @@ public class selectGamesActivity extends AppCompatActivity {
     }
 
     /**
-     * Game 1 Button Listener
+     * Game 1 (Double-R-P-S) Button Listener
      */
     private void game1ButtonManager() {
         game1 = (Button) findViewById(R.id.select_game_1_button);
@@ -61,7 +63,7 @@ public class selectGamesActivity extends AppCompatActivity {
     }
 
     /**
-     * Game 2 Button Listener
+     * Game 2 (Finger) Button Listener
      */
     private void game2ButtonManager() {
         game2 = (Button) findViewById(R.id.select_game_2_button);
@@ -69,6 +71,20 @@ public class selectGamesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent jumpToSettingPage = new Intent(selectGamesActivity.this, staffMembersActivity.class);
+                startActivity(jumpToSettingPage);
+            }
+        });
+    }
+
+    /**
+     * Game 3 (Double Bear) Button Listener
+     */
+    private void game3ButtonManager() {
+        game2 = (Button) findViewById(R.id.select_game_3_button);
+        game2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent jumpToSettingPage = new Intent(selectGamesActivity.this, doubleBearGameActivity.class);
                 startActivity(jumpToSettingPage);
             }
         });

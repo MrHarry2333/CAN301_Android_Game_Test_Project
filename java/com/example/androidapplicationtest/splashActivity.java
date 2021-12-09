@@ -39,8 +39,6 @@ public class splashActivity extends Activity {
 
     }
 
-
-
     /**
      * Global Theme's Color selection
      * determined by themeColorFlag, modified by chooseThemeColor()

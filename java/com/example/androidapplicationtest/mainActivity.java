@@ -62,7 +62,7 @@ public class mainActivity extends AppCompatActivity {
         messageBoardTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jumpToSettingPage = new Intent(mainActivity.this, selectGamesActivity.class);
+                Intent jumpToSettingPage = new Intent(mainActivity.this, messageBoardActivity.class);
                 startActivity(jumpToSettingPage);
             }
         });
