@@ -6,22 +6,21 @@
 
     <!-- 上面的三个图标 -->
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@mipmap/cut1"
         android:id="@+id/cut"
         android:layout_marginLeft="50dp"
         />
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@mipmap/stone1"
         android:id="@+id/stone"
         android:layout_toRightOf="@id/cut"
         android:layout_marginLeft="80dp"
         />
-
-    <!-- Pause and Resume Play -->
+<!--    暂停和播放-->
     <ImageButton
         android:id="@+id/musicPlayButton"
         android:layout_width="50dp"
@@ -33,37 +32,38 @@
         android:background="@drawable/playmusic"
         />
 
-
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@mipmap/bu1"
         android:id="@+id/bu"
         android:layout_marginLeft="80dp"
         android:layout_toRightOf="@id/stone"
         />
 
-    <!-- 下面的三个图标 -->
+<!--    下面的三个图标-->
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/cutBottom"
         android:src="@mipmap/cut1"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="50dp"
         />
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/stoneBottom"
         android:src="@mipmap/stone1"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="80dp"
+
         android:layout_toRightOf="@id/cutBottom"
+
         />
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/buBottom"
         android:src="@mipmap/bu1"
         android:layout_alignParentBottom="true"
@@ -71,118 +71,119 @@
         android:layout_toRightOf="@id/stoneBottom"
         />
 
-    <!-- 中间的三个图标（上面） -->
+<!--    中间的三个图标（上面）-->
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/cutBig"
         android:src="@mipmap/cut1"
         android:layout_below="@id/cut"
         android:layout_marginTop="150dp"
         />
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/stoneBig"
         android:src="@mipmap/stone1"
         android:layout_below="@id/stone"
         android:layout_toRightOf="@id/cutBigWall"
         android:layout_marginTop="150dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         />
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/buBig"
         android:src="@mipmap/bu1"
         android:layout_below="@id/bu"
         android:layout_marginTop="150dp"
         android:layout_toRightOf="@id/stoneBigWall"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         />
 
-    <!-- 2个空气墙 -->
+<!--    2个空气墙-->
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/cutBigWall"
         android:layout_below="@id/cut"
         android:layout_marginTop="150dp"
         />
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/stoneBigWall"
         android:layout_below="@id/stone"
         android:layout_toRightOf="@id/cutBigWall"
         android:layout_marginTop="150dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         />
 
 
-    <!-- 中间的三个图标（下面） -->
+<!--    //中间的三个图标（下面）-->
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/cutBigBottom"
         android:src="@mipmap/cut1"
         android:layout_above="@id/cutBottom"
         android:layout_marginBottom="150dp"
         />
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/stoneBigBottom"
         android:src="@mipmap/stone1"
         android:layout_above="@id/stoneBottom"
         android:layout_marginBottom="150dp"
         android:layout_toRightOf="@id/cutBigWall"
-        android:layout_marginLeft="50dp"
-        />
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/buBigBottom"
-        android:src="@mipmap/bu1"
-        android:layout_marginTop="500dp"
-        android:layout_above="@id/buBottom"
-        android:layout_marginBottom="150dp"
-        android:layout_toRightOf="@id/stoneBigWall"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         />
 
-    <!-- 2个空气墙 -->
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:id="@+id/buBigBottom"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_above="@id/buBottom"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="150dp"
+        android:layout_toRightOf="@id/stoneBigWall"
+        android:src="@mipmap/bu1" />
+
+<!--    //2个空气墙-->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/cutBigBottomWall"
         android:layout_above="@id/cutBottom"
         android:layout_marginBottom="150dp"
         />
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:id="@+id/stoneBigBottomWall"
         android:layout_above="@id/stoneBottom"
         android:layout_marginBottom="150dp"
         android:layout_toRightOf="@id/cutBigWall"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         />
 
-    <!-- 重启按钮 -->
+
+
+<!--    //重启按钮-->
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/restart"
         android:src="@mipmap/restart1"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="100dp"
         />
-
-    <!-- 开始按钮 -->
+<!--    //开始按钮-->
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/play"
         android:src="@mipmap/play1"
         android:layout_alignParentBottom="true"
@@ -190,7 +191,7 @@
         android:layout_marginBottom="100dp"
         />
 
-    <!-- 胜利显示 -->
+<!--    //胜利显示-->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -209,6 +210,5 @@
         android:layout_above="@id/stoneBottom"
         android:layout_marginBottom="50dp"
         />
-
 
 </RelativeLayout>

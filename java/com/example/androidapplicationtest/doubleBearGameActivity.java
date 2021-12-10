@@ -3,6 +3,7 @@ package com.example.androidapplicationtest;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
@@ -25,38 +27,47 @@ public class doubleBearGameActivity extends AppCompatActivity {
     public boolean showpic = false;//节点产生时出现图片
 
     public int redgas = 0;
-    public int bluegas = 0;
+    public int bluegas = 0;//两方的气的数量，亏气失败
 
     public int redfight = 0;
     public int bluefight = 0;
 
-    public ImageView rp;
+    public ImageView rp;//两张图片
     public ImageView bp;
 
+    public boolean pbgm;//是否正在播放bgm
+
     private SharedPreferences themeColorSharedPreferenceManager;
+    private PopupWindow rulePopupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         globalThemeColorSelection();
         setContentView(R.layout.activity_double_bear);
+        ImageButton rr = (ImageButton) findViewById(R.id.redright);//四个长按钮
+        ImageButton rl = (ImageButton) findViewById(R.id.redleft);
+        ImageButton bl = (ImageButton) findViewById(R.id.blueleft);
+        ImageButton br = (ImageButton) findViewById(R.id.blueright);
 
-        Button rr = (Button) findViewById(R.id.redright);//四个长按钮
-        Button rl = (Button) findViewById(R.id.redleft);
-        Button bl = (Button) findViewById(R.id.blueleft);
-        Button br = (Button) findViewById(R.id.blueright);
+        ImageButton ra = (ImageButton) findViewById(R.id.reda);//红蓝双方的六个键， red a b c 和blue a b c
+        ImageButton rb = (ImageButton) findViewById(R.id.redb);
+        ImageButton rc = (ImageButton) findViewById(R.id.redc);
+        ImageButton ba = (ImageButton) findViewById(R.id.bluea);
+        ImageButton bb = (ImageButton) findViewById(R.id.blueb);
+        ImageButton bc = (ImageButton) findViewById(R.id.bluec);
 
-        Button ra = (Button) findViewById(R.id.reda);//红蓝双方的六个键， red a b c 和blue a b c
-        Button rb = (Button) findViewById(R.id.redb);
-        Button rc = (Button) findViewById(R.id.redc);
-        Button ba = (Button) findViewById(R.id.bluea);
-        Button bb = (Button) findViewById(R.id.blueb);
-        Button bc = (Button) findViewById(R.id.bluec);
+        ImageButton restart = (ImageButton) findViewById(R.id.restartbutton);//重置键
 
-        Button restart = (Button) findViewById(R.id.restartbutton);//重置键
+        ImageButton pbgmr=(ImageButton)findViewById(R.id.pbgm2);//红色方（上方）音乐播放器设置
+        ImageButton pbgmb=(ImageButton)findViewById(R.id.pbgm1);
 
         rp=(ImageView) findViewById(R.id.redpic);
         bp=(ImageView) findViewById(R.id.bluepic);
+
+        MediaPlayer bgm;
+        bgm=MediaPlayer.create(this,R.raw.bgm1);
+        bgm.setLooping(true);
 
         rr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -201,9 +212,12 @@ public class doubleBearGameActivity extends AppCompatActivity {
 
                         }
 
+
+
                     }
 
                     //fourpass即将结束
+
 
                 }
             }
@@ -734,6 +748,33 @@ public class doubleBearGameActivity extends AppCompatActivity {
                 bp.setImageResource(R.drawable.nothing);
             }
         });
+
+        pbgmr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!pbgm){
+                    bgm.start();
+                    pbgm=true;
+                }else{
+                    bgm.pause();
+                    pbgm=false;
+                }
+            }
+        });
+
+        pbgmb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!pbgm){
+                    bgm.start();
+                    pbgm=true;
+                }else{
+                    bgm.pause();
+                    pbgm=false;
+                }
+            }
+        });
+
     }
 
     /**
@@ -792,9 +833,20 @@ public class doubleBearGameActivity extends AppCompatActivity {
      */
     private void initShowRulePopupWindow() {
         View v = LayoutInflater.from(doubleBearGameActivity.this).inflate(R.layout.popupwindow_game3_rule, null, false);
-        PopupWindow p = new PopupWindow(v, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, false);
-        p.setOutsideTouchable(true);
+        rulePopupWindow = new PopupWindow(v, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, false);
+        rulePopupWindow.setOutsideTouchable(true);
         // p.setBackgroundDrawable(new ColorDrawable(0x00000000));
-        p.showAsDropDown(findViewById(R.id.action_show_rules));
+        rulePopupWindow.showAsDropDown(findViewById(R.id.action_show_rules));
+    }
+
+    /**
+     * Dismiss the PopupWindow for rule when Destroy current Activity
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (rulePopupWindow != null) {
+            rulePopupWindow.dismiss();
+        }
     }
 }

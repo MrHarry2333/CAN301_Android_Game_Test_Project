@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/wood1">
+
+    <ImageButton
+        android:id="@+id/redright"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/hand"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:text="red right" />
+
+    <ImageButton
+        android:id="@+id/redleft"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:background="@drawable/hand"
+        android:text="red left" />
+
+    <ImageButton
+        android:id="@+id/blueleft"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/hand"
+        android:text="blue left" />
+
+    <ImageButton
+        android:id="@+id/blueright"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/hand"
+        android:text="blue right" />
+
+    <ImageButton
+        android:id="@+id/bluea"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toLeftOf="@+id/blueb"
+        android:background="@drawable/gas2"
+        android:text="blue a" />
+
+    <ImageButton
+        android:id="@+id/blueb"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/shield2"
+        android:text="blue b" />
+
+    <ImageButton
+        android:id="@+id/bluec"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@+id/blueb"
+        android:background="@drawable/baozi2"
+        android:text="blue c" />
+
+    <ImageButton
+        android:id="@+id/redc"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/redb"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:background="@drawable/baozi2"
+        android:text="red c" />
+
+    <ImageButton
+        android:id="@+id/redb"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/shield2"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:text="red b" />
+
+    <ImageButton
+        android:id="@+id/reda"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/redb"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:background="@drawable/gas2"
+        android:text="red a" />
+
+    <ImageView
+        android:id="@+id/redpic"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/nothing"
+
+        />
+
+    <ImageView
+        android:id="@+id/bluepic"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:rotationX="180"
+        android:src="@drawable/nothing" />
+
+    <ImageButton
+        android:id="@+id/restartbutton"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/restart"
+        android:text="restart" />
+
+    <ImageButton
+        android:id="@+id/pbgm1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/restartbutton"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/playbgm"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageButton
+        android:id="@+id/pbgm2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/restartbutton"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:background="@drawable/playbgm"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"/>
+
+
+
+
+
+</RelativeLayout>

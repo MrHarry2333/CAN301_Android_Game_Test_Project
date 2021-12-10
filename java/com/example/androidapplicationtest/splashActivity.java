@@ -31,12 +31,26 @@ public class splashActivity extends Activity {
         sleepHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(splashActivity.this, mainActivity.class),
+                Intent jumpToMainActivity = new Intent(splashActivity.this, mainActivity.class);
+                startActivityForResult(jumpToMainActivity,1,
                         ActivityOptions.makeSceneTransitionAnimation(splashActivity.this).toBundle());
                 // splashActivity.this.finish();
             }
         }, sleepTime);
 
+    }
+
+    /**
+     * Receive Intent result from mainActivity after jump from splashActivity to it
+     * Shut splashActivity down immediately after jumping.
+     * @param requestCode
+     * @param resultCode
+     * @param returnData
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent returnData) {
+        if (resultCode == RESULT_OK)
+            finish();
     }
 
     /**

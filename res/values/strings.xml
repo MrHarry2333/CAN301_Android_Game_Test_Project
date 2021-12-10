@@ -31,4 +31,12 @@
         \n\nThird, baozi. It named from a Chinese traditional food “baozi”. It likes dumplings but bigger, it will cost one gas for each time using. Every time when you use baozi and your rival use gas, he lost the game. But if you have no more than one gas and you use baozi, you will lost the game because of lack of gas. In this turn, even if he use gas, he will win the game.
         \n\nMore information may from the developer.</string>
 
+    <!-- String utils for Game 2 -->
+    <string name="click_the_button_to_start">click_the_button_to_start</string>
+    <string name="my_image_description" />
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="restart">restart</string>
+    <string name="pause">pause</string>
+
 </resources>

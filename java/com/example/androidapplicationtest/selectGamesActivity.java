@@ -56,7 +56,7 @@ public class selectGamesActivity extends AppCompatActivity {
         game1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jumpToSettingPage = new Intent(selectGamesActivity.this, guessGameActivity.class);
+                Intent jumpToSettingPage = new Intent(selectGamesActivity.this, doubleRPSGameActivity.class);
                 startActivity(jumpToSettingPage);
             }
         });
@@ -70,7 +70,7 @@ public class selectGamesActivity extends AppCompatActivity {
         game2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jumpToSettingPage = new Intent(selectGamesActivity.this, staffMembersActivity.class);
+                Intent jumpToSettingPage = new Intent(selectGamesActivity.this, fingerGameActivity.class);
                 startActivity(jumpToSettingPage);
             }
         });

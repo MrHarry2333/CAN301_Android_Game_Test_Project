@@ -49,8 +49,12 @@
 
         <!-- Guess Game (Game 1) Activity -->
         <activity
-            android:name=".guessGameActivity"
+            android:name=".doubleRPSGameActivity"
             android:label="Double Rock-paper-scissors" />
+
+        <!-- Finger (Game 2) Activity -->
+        <activity android:name=".fingerGameActivity"
+            android:label="Finer" />
 
         <!-- Double Bear Game (Game 3) Activity -->
         <activity android:name=".doubleBearGameActivity"

@@ -47,6 +47,10 @@ public class mainActivity extends AppCompatActivity {
         getWindow().setEnterTransition(new Fade());
         setContentView(R.layout.activity_main);
 
+        // Set request code to splashActivity to shut it down
+        // prevent for be able to goin back.
+        setResult(RESULT_OK);
+
         // Start Games TextView
         startGameTextView = (TextView) findViewById(R.id.start_game_main_textView);
         startGameTextView.setOnClickListener(new View.OnClickListener() {
@@ -152,6 +156,5 @@ public class mainActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
 
 }

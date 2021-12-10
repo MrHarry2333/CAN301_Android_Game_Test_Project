@@ -129,7 +129,6 @@ public class settingActivity extends AppCompatActivity {
         });
     }
 
-
     /**
      * Auto Global Brightness SeekBar Setting for auto_brightness_setting_switch
      */
@@ -167,7 +166,6 @@ public class settingActivity extends AppCompatActivity {
         });
     }
 
-
     /**
      * Global Volume Switch Setting for global_volume_Seekbar
      */
@@ -189,7 +187,6 @@ public class settingActivity extends AppCompatActivity {
         globalVolumeSeekBar.setMax(maxSystemVolume);
         globalVolumeSeekBar.setProgress(currentSystemVolume);
     }
-
 
     /**
      * Mute Switch Setting for mute_setting_switch

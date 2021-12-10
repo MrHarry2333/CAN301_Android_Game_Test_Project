@@ -42,7 +42,7 @@ public class MyAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             mViewHolder = new ViewHolder();
-            convertView = mLayoutInflater.inflate(R.layout.activity_messageboard_layout, null);
+            convertView = mLayoutInflater.inflate(R.layout.activity_message_board_layout, null);
             mViewHolder.mTextView = (TextView) convertView.findViewById(R.id.text_view);
             mViewHolder.mEditText = (EditText) convertView.findViewById(R.id.edit_text);
             mViewHolder.mImageView = (ImageView)convertView.findViewById(R.id.image_view) ;
