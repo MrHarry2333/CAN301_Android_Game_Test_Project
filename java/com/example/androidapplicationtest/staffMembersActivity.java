@@ -2,11 +2,16 @@ package com.example.androidapplicationtest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 public class staffMembersActivity extends AppCompatActivity {
 
+    private ImageView githubIcon;
     private SharedPreferences themeColorSharedPreferenceManager;
 
     @Override
@@ -14,6 +19,17 @@ public class staffMembersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         globalThemeColorSelection();
         setContentView(R.layout.activity_staff_members);
+
+        githubIcon = (ImageView) findViewById(R.id.github_logo_img);
+        githubIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri u = Uri.parse("https://github.com/MrHarry2333/CAN301_Android_Game_Test_Project");
+                Intent i = new Intent("android.intent.action.VIEW");
+                i.setData(u);
+                startActivity(i);
+            }
+        });
     }
 
     /**

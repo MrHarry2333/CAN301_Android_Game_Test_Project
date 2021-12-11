@@ -39,4 +39,11 @@
     <string name="restart">restart</string>
     <string name="pause">pause</string>
 
+    <string name="staff_ack_msg1">A CAN301 module assessment related to simple native-Java based Android development.
+        \nTest Platform: Xiaomi Mi Pad 4 with MIUI 9.6 (Android Oreo 8.1.0)
+        \n\nPresented by Mingyi, Likang, SuperK &amp; Harry Lee.
+        \nAdviser: Jianjun Chen
+        \n\nDec, 2021</string>
+    <string name="staff_ack_msg2">Project\'s GitHub repo available at:</string>
+
 </resources>

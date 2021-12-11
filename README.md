@@ -1,7 +1,12 @@
 # CAN301_Android_Game_Test_Project
-An school's assessment related to simple Android native Java development.
+A CAN301 module assessment related to simple native-Java based Android development.
+- Test Platform: Xiaomi Mi Pad 4 with MIUI 9.6 (Android Oreo 8.1.0)
+- Presented by Mingyi, Likang, SuperK &amp; Harry Lee.
+- Adviser: Jianjun Chen
 
-1. ? - Double Rock-paper-scissors
+Dec, 2021
+
+1. Likang - Double Rock-paper-scissors
 
 In the first round, both side of the player choose two options respectively.
 
@@ -13,7 +18,7 @@ This choice will cancel the selected item. After selecting, press the start butt
 
 Finally, the final result will be displayed in the middle of the screen.
 
-2. ? - Finger
+2. Mingyi - Finger
 
 This game is called finger, it is a game similar to throw the die.
 
@@ -25,7 +30,7 @@ The restart button is to return the three views into the initial state.
 
 The player can write down their goal on the edit line. Who will win the game and the rule of game is depended on you.
 
-3. superK - Double Bear
+3. SuperK - Double Bear
 
 This is a game named “double bear” which used to be a sample gesture game like finger guessing game in developer’s childhood.
 
