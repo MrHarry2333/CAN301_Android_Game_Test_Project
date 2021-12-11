@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".doubleBearGameActivity"
-    android:background="@drawable/wood1">
+    android:background="@mipmap/wood1">
 
     <ImageButton
         android:id="@+id/redright"
@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="3dp"
-        android:background="@drawable/hand"
+        android:background="@mipmap/hand"
         android:rotationX="180"
         android:rotationY="180"
         android:text="red right" />
@@ -30,7 +30,7 @@
         android:layout_marginTop="3dp"
         android:rotationX="180"
         android:rotationY="180"
-        android:background="@drawable/hand"
+        android:background="@mipmap/hand"
         android:text="red left" />
 
     <ImageButton
@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="3dp"
-        android:background="@drawable/hand"
+        android:background="@mipmap/hand"
         android:text="blue left" />
 
     <ImageButton
@@ -52,7 +52,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="3dp"
-        android:background="@drawable/hand"
+        android:background="@mipmap/hand"
         android:text="blue right" />
 
     <ImageButton
@@ -63,7 +63,7 @@
         android:layout_marginRight="25dp"
         android:layout_marginBottom="3dp"
         android:layout_toLeftOf="@+id/blueb"
-        android:background="@drawable/gas2"
+        android:background="@mipmap/gas2"
         android:text="blue a" />
 
     <ImageButton
@@ -73,7 +73,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="3dp"
-        android:background="@drawable/shield2"
+        android:background="@mipmap/shield2"
         android:text="blue b" />
 
     <ImageButton
@@ -84,7 +84,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginBottom="3dp"
         android:layout_toRightOf="@+id/blueb"
-        android:background="@drawable/baozi2"
+        android:background="@mipmap/baozi2"
         android:text="blue c" />
 
     <ImageButton
@@ -96,7 +96,7 @@
         android:layout_toLeftOf="@+id/redb"
         android:rotationX="180"
         android:rotationY="180"
-        android:background="@drawable/baozi2"
+        android:background="@mipmap/baozi2"
         android:text="red c" />
 
     <ImageButton
@@ -105,7 +105,7 @@
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="3dp"
-        android:background="@drawable/shield2"
+        android:background="@mipmap/shield2"
         android:rotationX="180"
         android:rotationY="180"
         android:text="red b" />
@@ -117,7 +117,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="3dp"
         android:layout_toRightOf="@+id/redb"
-        android:background="@drawable/gas2"
+        android:background="@mipmap/gas2"
         android:rotationX="180"
         android:rotationY="180"
         android:text="red a" />
@@ -128,7 +128,7 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:src="@drawable/nothing"
+        android:src="@mipmap/nothing"
 
         />
 
@@ -140,14 +140,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="150dp"
         android:rotationX="180"
-        android:src="@drawable/nothing" />
+        android:src="@mipmap/nothing" />
 
     <ImageButton
         android:id="@+id/restartbutton"
         android:layout_width="450dp"
         android:layout_height="70dp"
         android:layout_centerInParent="true"
-        android:background="@drawable/restart"
+        android:background="@mipmap/restart_doublebear"
         android:text="restart" />
 
     <ImageButton
@@ -156,7 +156,7 @@
         android:layout_height="60dp"
         android:layout_below="@+id/restartbutton"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/playbgm"
+        android:background="@mipmap/playbgm"
         android:layout_marginLeft="5dp"/>
 
     <ImageButton
@@ -166,7 +166,7 @@
         android:layout_above="@+id/restartbutton"
         android:rotationX="180"
         android:rotationY="180"
-        android:background="@drawable/playbgm"
+        android:background="@mipmap/playbgm"
         android:layout_alignParentRight="true"
         android:layout_marginRight="5dp"/>
 

@@ -88,16 +88,16 @@ public class doubleBearGameActivity extends AppCompatActivity {
 
                     if(redfight==1&&bluefight==3){           //情况为红1蓝3，1是气，2是护盾，3是包子
                         if(bluegas<=0){                      //判定是否还有气
-                            rp.setImageResource(R.drawable.victory1);//无气红胜
-                            bp.setImageResource(R.drawable.nothing);
+                            rp.setImageResource(R.mipmap.victory1);//无气红胜
+                            bp.setImageResource(R.mipmap.nothing);
                             redgas=0;                        //游戏清零
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
 
                         }
-                        bp.setImageResource(R.drawable.victory1);//有气蓝胜
-                        rp.setImageResource(R.drawable.nothing);
+                        bp.setImageResource(R.mipmap.victory1);//有气蓝胜
+                        rp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -105,15 +105,15 @@ public class doubleBearGameActivity extends AppCompatActivity {
                     }
                     if(redfight==3&&bluefight==1){           //情况为红3蓝1
                         if(redgas<=0){
-                            bp.setImageResource(R.drawable.victory1);
-                            rp.setImageResource(R.drawable.nothing);
+                            bp.setImageResource(R.mipmap.victory1);
+                            rp.setImageResource(R.mipmap.nothing);
                             redgas=0;
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
                         }
-                        rp.setImageResource(R.drawable.victory1);
-                        bp.setImageResource(R.drawable.nothing);
+                        rp.setImageResource(R.mipmap.victory1);
+                        bp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -124,80 +124,80 @@ public class doubleBearGameActivity extends AppCompatActivity {
                         if (redfight == 1 && bluefight == 1) {           //情况为红蓝同1
                             redgas++;
                             bluegas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if (redfight == 1 && bluefight == 2) {           //情况为红1蓝2
                             redgas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.shield1);
                         }
 
                         if(redfight== 2 &&bluefight== 1){
                             bluegas++;
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if(redfight== 2 &&bluefight== 2){
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.shield1);
 
                         }
 
                         if (redfight == 2 && bluefight == 3) {
                             if (bluegas <= 0) {                      //判定是否还有气
-                                rp.setImageResource(R.drawable.victory1);//无气红胜
-                                bp.setImageResource(R.drawable.nothing);
+                                rp.setImageResource(R.mipmap.victory1);//无气红胜
+                                bp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 bluegas--;
-                                rp.setImageResource(R.drawable.shield1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.shield1);
+                                bp.setImageResource(R.mipmap.baozi1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 2){
                             if(redgas<=0){
-                                bp.setImageResource(R.drawable.victory1);
-                                rp.setImageResource(R.drawable.nothing);
+                                bp.setImageResource(R.mipmap.victory1);
+                                rp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 redgas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.shield1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.shield1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 3){
                             if(redgas<=0&&bluegas<=0){
-                                rp.setImageResource(R.drawable.victory1);
-                                bp.setImageResource(R.drawable.victory1);
+                                rp.setImageResource(R.mipmap.victory1);
+                                bp.setImageResource(R.mipmap.victory1);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 if(redgas<=0){
-                                    bp.setImageResource(R.drawable.victory1);
-                                    rp.setImageResource(R.drawable.nothing);
+                                    bp.setImageResource(R.mipmap.victory1);
+                                    rp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
                                     bluefight=0;
                                 }
                                 if (bluegas <= 0) {
-                                    rp.setImageResource(R.drawable.victory1);
-                                    bp.setImageResource(R.drawable.nothing);
+                                    rp.setImageResource(R.mipmap.victory1);
+                                    bp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
@@ -205,8 +205,8 @@ public class doubleBearGameActivity extends AppCompatActivity {
                                 }
                                 redgas--;
                                 bluegas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.baozi1);
 
                             }
 
@@ -242,16 +242,16 @@ public class doubleBearGameActivity extends AppCompatActivity {
 
                     if(redfight==1&&bluefight==3){           //情况为红1蓝3，1是气，2是护盾，3是包子
                         if(bluegas<=0){                      //判定是否还有气
-                            rp.setImageResource(R.drawable.victory1);//无气红胜
-                            bp.setImageResource(R.drawable.nothing);
+                            rp.setImageResource(R.mipmap.victory1);//无气红胜
+                            bp.setImageResource(R.mipmap.nothing);
                             redgas=0;                        //游戏清零
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
 
                         }
-                        bp.setImageResource(R.drawable.victory1);//有气蓝胜
-                        rp.setImageResource(R.drawable.nothing);
+                        bp.setImageResource(R.mipmap.victory1);//有气蓝胜
+                        rp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -259,15 +259,15 @@ public class doubleBearGameActivity extends AppCompatActivity {
                     }
                     if(redfight==3&&bluefight==1){           //情况为红3蓝1
                         if(redgas<=0){
-                            bp.setImageResource(R.drawable.victory1);
-                            rp.setImageResource(R.drawable.nothing);
+                            bp.setImageResource(R.mipmap.victory1);
+                            rp.setImageResource(R.mipmap.nothing);
                             redgas=0;
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
                         }
-                        rp.setImageResource(R.drawable.victory1);
-                        bp.setImageResource(R.drawable.nothing);
+                        rp.setImageResource(R.mipmap.victory1);
+                        bp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -278,80 +278,80 @@ public class doubleBearGameActivity extends AppCompatActivity {
                         if (redfight == 1 && bluefight == 1) {           //情况为红蓝同1
                             redgas++;
                             bluegas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if (redfight == 1 && bluefight == 2) {           //情况为红1蓝2
                             redgas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.shield1);
                         }
 
                         if(redfight== 2 &&bluefight== 1){
                             bluegas++;
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if(redfight== 2 &&bluefight== 2){
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.shield1);
 
                         }
 
                         if (redfight == 2 && bluefight == 3) {
                             if (bluegas <= 0) {                      //判定是否还有气
-                                rp.setImageResource(R.drawable.victory1);//无气红胜
-                                bp.setImageResource(R.drawable.nothing);
+                                rp.setImageResource(R.mipmap.victory1);//无气红胜
+                                bp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 bluegas--;
-                                rp.setImageResource(R.drawable.shield1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.shield1);
+                                bp.setImageResource(R.mipmap.baozi1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 2){
                             if(redgas<=0){
-                                bp.setImageResource(R.drawable.victory1);
-                                rp.setImageResource(R.drawable.nothing);
+                                bp.setImageResource(R.mipmap.victory1);
+                                rp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 redgas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.shield1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.shield1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 3){
                             if(redgas<=0&&bluegas<=0){
-                                rp.setImageResource(R.drawable.victory1);
-                                bp.setImageResource(R.drawable.victory1);
+                                rp.setImageResource(R.mipmap.victory1);
+                                bp.setImageResource(R.mipmap.victory1);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 if(redgas<=0){
-                                    bp.setImageResource(R.drawable.victory1);
-                                    rp.setImageResource(R.drawable.nothing);
+                                    bp.setImageResource(R.mipmap.victory1);
+                                    rp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
                                     bluefight=0;
                                 }
                                 if (bluegas <= 0) {
-                                    rp.setImageResource(R.drawable.victory1);
-                                    bp.setImageResource(R.drawable.nothing);
+                                    rp.setImageResource(R.mipmap.victory1);
+                                    bp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
@@ -359,8 +359,8 @@ public class doubleBearGameActivity extends AppCompatActivity {
                                 }
                                 redgas--;
                                 bluegas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.baozi1);
 
                             }
 
@@ -394,16 +394,16 @@ public class doubleBearGameActivity extends AppCompatActivity {
 
                     if(redfight==1&&bluefight==3){           //情况为红1蓝3，1是气，2是护盾，3是包子
                         if(bluegas<=0){                      //判定是否还有气
-                            rp.setImageResource(R.drawable.victory1);//无气红胜
-                            bp.setImageResource(R.drawable.nothing);
+                            rp.setImageResource(R.mipmap.victory1);//无气红胜
+                            bp.setImageResource(R.mipmap.nothing);
                             redgas=0;                        //游戏清零
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
 
                         }
-                        bp.setImageResource(R.drawable.victory1);//有气蓝胜
-                        rp.setImageResource(R.drawable.nothing);
+                        bp.setImageResource(R.mipmap.victory1);//有气蓝胜
+                        rp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -411,15 +411,15 @@ public class doubleBearGameActivity extends AppCompatActivity {
                     }
                     if(redfight==3&&bluefight==1){           //情况为红3蓝1
                         if(redgas<=0){
-                            bp.setImageResource(R.drawable.victory1);
-                            rp.setImageResource(R.drawable.nothing);
+                            bp.setImageResource(R.mipmap.victory1);
+                            rp.setImageResource(R.mipmap.nothing);
                             redgas=0;
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
                         }
-                        rp.setImageResource(R.drawable.victory1);
-                        bp.setImageResource(R.drawable.nothing);
+                        rp.setImageResource(R.mipmap.victory1);
+                        bp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -430,80 +430,80 @@ public class doubleBearGameActivity extends AppCompatActivity {
                         if (redfight == 1 && bluefight == 1) {           //情况为红蓝同1
                             redgas++;
                             bluegas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if (redfight == 1 && bluefight == 2) {           //情况为红1蓝2
                             redgas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.shield1);
                         }
 
                         if(redfight== 2 &&bluefight== 1){
                             bluegas++;
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if(redfight== 2 &&bluefight== 2){
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.shield1);
 
                         }
 
                         if (redfight == 2 && bluefight == 3) {
                             if (bluegas <= 0) {                      //判定是否还有气
-                                rp.setImageResource(R.drawable.victory1);//无气红胜
-                                bp.setImageResource(R.drawable.nothing);
+                                rp.setImageResource(R.mipmap.victory1);//无气红胜
+                                bp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 bluegas--;
-                                rp.setImageResource(R.drawable.shield1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.shield1);
+                                bp.setImageResource(R.mipmap.baozi1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 2){
                             if(redgas<=0){
-                                bp.setImageResource(R.drawable.victory1);
-                                rp.setImageResource(R.drawable.nothing);
+                                bp.setImageResource(R.mipmap.victory1);
+                                rp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 redgas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.shield1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.shield1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 3){
                             if(redgas<=0&&bluegas<=0){
-                                rp.setImageResource(R.drawable.victory1);
-                                bp.setImageResource(R.drawable.victory1);
+                                rp.setImageResource(R.mipmap.victory1);
+                                bp.setImageResource(R.mipmap.victory1);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 if(redgas<=0){
-                                    bp.setImageResource(R.drawable.victory1);
-                                    rp.setImageResource(R.drawable.nothing);
+                                    bp.setImageResource(R.mipmap.victory1);
+                                    rp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
                                     bluefight=0;
                                 }
                                 if (bluegas <= 0) {
-                                    rp.setImageResource(R.drawable.victory1);
-                                    bp.setImageResource(R.drawable.nothing);
+                                    rp.setImageResource(R.mipmap.victory1);
+                                    bp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
@@ -511,8 +511,8 @@ public class doubleBearGameActivity extends AppCompatActivity {
                                 }
                                 redgas--;
                                 bluegas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.baozi1);
 
                             }
 
@@ -546,16 +546,16 @@ public class doubleBearGameActivity extends AppCompatActivity {
 
                     if(redfight==1&&bluefight==3){           //情况为红1蓝3，1是气，2是护盾，3是包子
                         if(bluegas<=0){                      //判定是否还有气
-                            rp.setImageResource(R.drawable.victory1);//无气红胜
-                            bp.setImageResource(R.drawable.nothing);
+                            rp.setImageResource(R.mipmap.victory1);//无气红胜
+                            bp.setImageResource(R.mipmap.nothing);
                             redgas=0;                        //游戏清零
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
 
                         }
-                        bp.setImageResource(R.drawable.victory1);//有气蓝胜
-                        rp.setImageResource(R.drawable.nothing);
+                        bp.setImageResource(R.mipmap.victory1);//有气蓝胜
+                        rp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -563,15 +563,15 @@ public class doubleBearGameActivity extends AppCompatActivity {
                     }
                     if(redfight==3&&bluefight==1){           //情况为红3蓝1
                         if(redgas<=0){
-                            bp.setImageResource(R.drawable.victory1);
-                            rp.setImageResource(R.drawable.nothing);
+                            bp.setImageResource(R.mipmap.victory1);
+                            rp.setImageResource(R.mipmap.nothing);
                             redgas=0;
                             bluegas=0;
                             redfight=0;
                             bluefight=0;
                         }
-                        rp.setImageResource(R.drawable.victory1);
-                        bp.setImageResource(R.drawable.nothing);
+                        rp.setImageResource(R.mipmap.victory1);
+                        bp.setImageResource(R.mipmap.nothing);
                         redgas=0;
                         bluegas=0;
                         redfight=0;
@@ -582,80 +582,80 @@ public class doubleBearGameActivity extends AppCompatActivity {
                         if (redfight == 1 && bluefight == 1) {           //情况为红蓝同1
                             redgas++;
                             bluegas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if (redfight == 1 && bluefight == 2) {           //情况为红1蓝2
                             redgas++;
-                            rp.setImageResource(R.drawable.gas1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.gas1);
+                            bp.setImageResource(R.mipmap.shield1);
                         }
 
                         if(redfight== 2 &&bluefight== 1){
                             bluegas++;
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.gas1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.gas1);
                         }
 
                         if(redfight== 2 &&bluefight== 2){
-                            rp.setImageResource(R.drawable.shield1);
-                            bp.setImageResource(R.drawable.shield1);
+                            rp.setImageResource(R.mipmap.shield1);
+                            bp.setImageResource(R.mipmap.shield1);
 
                         }
 
                         if (redfight == 2 && bluefight == 3) {
                             if (bluegas <= 0) {                      //判定是否还有气
-                                rp.setImageResource(R.drawable.victory1);//无气红胜
-                                bp.setImageResource(R.drawable.nothing);
+                                rp.setImageResource(R.mipmap.victory1);//无气红胜
+                                bp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 bluegas--;
-                                rp.setImageResource(R.drawable.shield1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.shield1);
+                                bp.setImageResource(R.mipmap.baozi1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 2){
                             if(redgas<=0){
-                                bp.setImageResource(R.drawable.victory1);
-                                rp.setImageResource(R.drawable.nothing);
+                                bp.setImageResource(R.mipmap.victory1);
+                                rp.setImageResource(R.mipmap.nothing);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 redgas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.shield1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.shield1);
                             }
 
                         }
 
                         if(redfight== 3 &&bluefight== 3){
                             if(redgas<=0&&bluegas<=0){
-                                rp.setImageResource(R.drawable.victory1);
-                                bp.setImageResource(R.drawable.victory1);
+                                rp.setImageResource(R.mipmap.victory1);
+                                bp.setImageResource(R.mipmap.victory1);
                                 redgas=0;
                                 bluegas=0;
                                 redfight=0;
                                 bluefight=0;
                             }else{
                                 if(redgas<=0){
-                                    bp.setImageResource(R.drawable.victory1);
-                                    rp.setImageResource(R.drawable.nothing);
+                                    bp.setImageResource(R.mipmap.victory1);
+                                    rp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
                                     bluefight=0;
                                 }
                                 if (bluegas <= 0) {
-                                    rp.setImageResource(R.drawable.victory1);
-                                    bp.setImageResource(R.drawable.nothing);
+                                    rp.setImageResource(R.mipmap.victory1);
+                                    bp.setImageResource(R.mipmap.nothing);
                                     redgas=0;
                                     bluegas=0;
                                     redfight=0;
@@ -663,8 +663,8 @@ public class doubleBearGameActivity extends AppCompatActivity {
                                 }
                                 redgas--;
                                 bluegas--;
-                                rp.setImageResource(R.drawable.baozi1);
-                                bp.setImageResource(R.drawable.baozi1);
+                                rp.setImageResource(R.mipmap.baozi1);
+                                bp.setImageResource(R.mipmap.baozi1);
 
                             }
 
@@ -744,8 +744,8 @@ public class doubleBearGameActivity extends AppCompatActivity {
                 bluegas=0;
                 redfight=0;
                 bluefight=0;
-                rp.setImageResource(R.drawable.nothing);
-                bp.setImageResource(R.drawable.nothing);
+                rp.setImageResource(R.mipmap.nothing);
+                bp.setImageResource(R.mipmap.nothing);
             }
         });
 
@@ -835,7 +835,7 @@ public class doubleBearGameActivity extends AppCompatActivity {
         View v = LayoutInflater.from(doubleBearGameActivity.this).inflate(R.layout.popupwindow_game3_rule, null, false);
         rulePopupWindow = new PopupWindow(v, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, false);
         rulePopupWindow.setOutsideTouchable(true);
-        // p.setBackgroundDrawable(new ColorDrawable(0x00000000));
+        // p.setBackgroundmipmap(new Colormipmap(0x00000000));
         rulePopupWindow.showAsDropDown(findViewById(R.id.action_show_rules));
     }
 
