@@ -8,10 +8,11 @@
 
     <Button
         android:id="@+id/select_game_2_button"
-        android:layout_width="222dp"
-        android:layout_height="212dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="48dp"
+        android:background="@mipmap/game_icon_finger"
         android:text="@string/game_2_string"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,10 +20,11 @@
 
     <Button
         android:id="@+id/select_game_3_button"
-        android:layout_width="222dp"
-        android:layout_height="212dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
+        android:background="@mipmap/game_icon_double_bear"
         android:text="@string/game_3_string"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,8 +32,8 @@
 
     <Button
         android:id="@+id/select_game_toBeContinue_button"
-        android:layout_width="222dp"
-        android:layout_height="212dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="48dp"
         android:text="to be continued..."
@@ -41,10 +43,11 @@
 
     <Button
         android:id="@+id/select_game_1_button"
-        android:layout_width="222dp"
-        android:layout_height="212dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
+        android:background="@mipmap/game_icon_doublerps"
         android:text="@string/game_1_string"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
