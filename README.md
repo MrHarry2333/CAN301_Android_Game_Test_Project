@@ -42,8 +42,8 @@ Secondly, shield. It can protect you from the “baozi”. It won’t need gas a
 Third, baozi. It named from a Chinese traditional food “baozi”. It likes dumplings but bigger, it will cost one gas for each time using. Every time when you use baozi and your rival use gas, he lost the game. But if you have no more than one gas and you use baozi, you will lost the game because of lack of gas. In this turn, even if he use gas, he will win the game.
 More information may from the developer.
 
-4. ? - Message Board
+4. Likang - Message Board
 
-5. Harry Lee - Main Menu
+5. Harry Lee - Main Menu & Settings Page
 
 r.y.
