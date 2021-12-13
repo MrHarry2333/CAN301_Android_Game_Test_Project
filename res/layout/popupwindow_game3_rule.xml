@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#99FFFFFF"
-    android:orientation="vertical">
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/game_3_rule_popupwindow_text"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:lineSpacingExtra="4dp"
-        android:scrollbars="vertical"
-        android:singleLine="false"
-        android:text="@string/game_3_rule"
-        android:textColor="#5A5A5A"
-        android:textSize="23sp" />
+        android:layout_margin="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="#99FFFFFF"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/game_3_rule_popupwindow_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
+            android:lineSpacingExtra="4dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="@string/game_3_rule"
+            android:textColor="#5A5A5A"
+            android:textSize="23sp" />
+
+    </LinearLayout>
+</ScrollView>
