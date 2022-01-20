@@ -3,6 +3,7 @@ A CAN301 module assessment related to simple native-Java based Android developme
 - Test Platform: Xiaomi Mi Pad 4 with MIUI 9.6 (Android Oreo 8.1.0)
 - Presented by Mr.Harry and other group members, advised by Mr.C.
 - Few information has been modified and deleted considering private information protection.
+
 Dec, 2021
 
 1. Double Rock-paper-scissors
