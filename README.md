@@ -1,12 +1,11 @@
 # CAN301_Android_Game_Test_Project
 A CAN301 module assessment related to simple native-Java based Android development.
 - Test Platform: Xiaomi Mi Pad 4 with MIUI 9.6 (Android Oreo 8.1.0)
-- Presented by Mingyi, Likang, SuperK &amp; Harry Lee.
-- Adviser: Jianjun Chen
-
+- Presented by Mr.Harry and other group members, advised by Mr.C.
+- Few information has been modified and deleted considering private information protection.
 Dec, 2021
 
-1. Likang - Double Rock-paper-scissors
+1. Double Rock-paper-scissors
 
 In the first round, both side of the player choose two options respectively.
 
@@ -18,7 +17,7 @@ This choice will cancel the selected item. After selecting, press the start butt
 
 Finally, the final result will be displayed in the middle of the screen.
 
-2. Mingyi - Finger
+2. Finger
 
 This game is called finger, it is a game similar to throw the die.
 
@@ -30,7 +29,7 @@ The restart button is to return the three views into the initial state.
 
 The player can write down their goal on the edit line. Who will win the game and the rule of game is depended on you.
 
-3. SuperK - Double Bear
+3. Double Bear
 
 This is a game named “double bear” which used to be a sample gesture game like finger guessing game in developer’s childhood.
 
@@ -42,8 +41,6 @@ Secondly, shield. It can protect you from the “baozi”. It won’t need gas a
 Third, baozi. It named from a Chinese traditional food “baozi”. It likes dumplings but bigger, it will cost one gas for each time using. Every time when you use baozi and your rival use gas, he lost the game. But if you have no more than one gas and you use baozi, you will lost the game because of lack of gas. In this turn, even if he use gas, he will win the game.
 More information may from the developer.
 
-4. Likang - Message Board
+4. Message Board
 
-5. Harry Lee - Main Menu & Settings Page
-
-r.y.
+5. Harry - Main Menu & Settings Page
